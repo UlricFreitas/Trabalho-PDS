@@ -1,0 +1,44 @@
+body{
+   font-family: arial;
+   color: #fff;
+   width: 100%;
+   height: 100vh;
+   background-image: url(imagens/Beautiful_night_scenery_Galaxy_HD_Wallpaper_09_1366x768.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.b{
+   position: relative;
+   right: 70px;
+   margin-top: 20vh;
+   padding: 10px 40px;
+   border: 0;
+   border-radius: 10px;
+   background-color: #3565a3;
+   color: #fff;
+   cursor: pointer;
+}
+
+.c{
+   position: relative;
+   left: -50px;
+   margin-top: 20vh;
+   padding: 10px 40px;
+   border: 0;
+   border-radius: 10px;
+   background-color: #3565a3;
+   color: #fff;
+   cursor: pointer;
+
+}
+
+.a{
+    margin-top: -2vh;
+    position: relative;
+    left: 175px;
+}
