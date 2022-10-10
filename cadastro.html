@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+
+    <script>
+        function mascara_cpf() {
+            var cpf = document.getElementById('cpf1')
+            if(cpf.value.length == 3 || cpf.value.length == 7){
+                cpf.value += "."
+            } else if(cpf.value.length == 11) {
+                cpf.value += "-"
+            }
+
+        }
+    </script>
+
+<script>
+    function mascara_rg() {
+        var rg = document.getElementById('rg1')
+        if(rg.value.length == 2 || rg.value.length == 6){
+            rg.value += "."
+        } else if(rg.value.length == 10) {
+            rg.value += "-"
+        }
+
+    }
+</script>
+
+<script>
+    function mascara_data() {
+        var data = document.getElementById('data1')
+        if(data.value.length == 2 || data.value.length == 5){
+            data.value += "/"
+        }
+
+    }
+</script>
+
+<script>
+    function mascara_tel() {
+        var tel = document.getElementById('tel1')
+        if(tel.value.length == 0){
+            tel.value += "("
+        } else if(tel.value.length == 3) {
+            tel.value += ")"
+        } else if (tel.value.length ==9) {
+            tel.value +="-"
+        }
+
+    }
+</script>
+
+</head>
+<body>
+   <section class="form-container">
+     <div class="container">
+        <form action="{{url_for('cadastro')}}", method="POST">
+            <h2>Página de cadastro</h2>
+            <div class="input-single">
+                <input type="text" name="" id="pg" class="input" required>
+                <label for="pg">Nome completo</label>
+            </div>
+
+            <div class="input-single">
+                <input type="text" name="cpf" id="cpf1" autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" class="input" required>
+                <label for="cpf1">CPF</label>
+            </div>
+
+            <div class="input-single">
+                <input type="text" name="rg" id="rg1" autocomplete="off" maxlength="12" onkeyup="mascara_rg()" class="input" required>
+                <label for="rg1">RG</label>
+            </div>
+
+            <div class="input-single">
+                <input type="text" name="datadenascimento" id="data1" autocomplete="off" maxlength="10" onkeyup="mascara_data()" class="input" required>
+                <label for="data1">Data de Nascimento</label>
+            </div>
+
+            <div class="input-single">
+                <input type="text" name="telefonedecontato" id="tel1" autocomplete="off" maxlength="14" onkeyup="mascara_tel()" class="input" required>
+                <label for="tel1">Telefone de contato</label>
+            </div>
+
+            <div class="input-single">
+                <input type="email" name="email" id="email1" class="input" required>
+                <label for="email1">Email</label>
+            </div>
+
+            <div class="input-single">
+                <input type="text" name="endereco" id="endereco1" class="input" required>
+                <label for="endereco1">Endereço</label>
+            </div>
+
+            <div class="input-single">
+                <input type="text" name="cidade" id="cidade1" class="input" required>
+                <label for="cidade1">Cidade</label>
+            </div>
+
+            <div class="input-single">
+                <input type="text" name="uf" maxlength="2" id="uf1" class="input" required>
+                <label for="uf1">UF</label>
+            </div>
+
+                <label for="foto1">Foto</label><br>
+                <input type="file" name="foto" id="foto1" class="" required><br>
+
+            <br><input type="submit" value="Enviar Cadastro">
+            <input type="reset" value="Limpar Campos"><br>
+            <br>
+
+            <p class="a"><a href="/">Página inicial</a></p>
+            
+        </form>
+     </div>
+   </section>
+
+</body>
+</html> 
